@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Azure DevOps & Cloud Platform Engineer — Portfolio showcasing expertise in cloud architecture, CI/CD, Infrastructure as Code, and platform engineering." />
+  <meta name="theme-color" content="#0078D4" />
+  <title>Faraz Islam | Azure DevOps &amp; Cloud Platform Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ═══════════ PARTICLE CANVAS ═══════════ -->
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Home">
+        <span class="logo-bracket">&lt;</span><span class="logo-text">FI</span><span class="logo-bracket"> /&gt;</span>
+      </a>
+
+      <!-- Pipeline-style nav links -->
+      <div class="nav-pipeline" id="navLinks">
+        <a href="#home" class="nav-node active" data-section="home">
+          <span class="node-dot"></span><span class="node-label">Home</span>
+        </a>
+        <span class="pipeline-line"></span>
+        <a href="#about" class="nav-node" data-section="about">
+          <span class="node-dot"></span><span class="node-label">About</span>
+        </a>
+        <span class="pipeline-line"></span>
+        <a href="#skills" class="nav-node" data-section="skills">
+          <span class="node-dot"></span><span class="node-label">Skills</span>
+        </a>
+        <span class="pipeline-line"></span>
+        <a href="#experience" class="nav-node" data-section="experience">
+          <span class="node-dot"></span><span class="node-label">Experience</span>
+        </a>
+        <span class="pipeline-line"></span>
+        <a href="#projects" class="nav-node" data-section="projects">
+          <span class="node-dot"></span><span class="node-label">Projects</span>
+        </a>
+        <span class="pipeline-line"></span>
+        <a href="#contact" class="nav-node" data-section="contact">
+          <span class="node-dot"></span><span class="node-label">Contact</span>
+        </a>
+      </div>
+
+      <!-- Mobile menu toggle -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO / HOME ═══════════ -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="terminal-window reveal">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">portfolio.sh</span>
+        </div>
+        <div class="terminal-body">
+          <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">whoami</span></p>
+          <p class="terminal-output hero-name" id="heroName"></p>
+          <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat role.txt</span></p>
+          <h1 class="terminal-output hero-title">Azure DevOps &amp; Cloud Platform Engineer</h1>
+          <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">echo $MISSION</span></p>
+          <p class="terminal-output hero-subtitle">Building resilient cloud infrastructure, automating everything,<br/>and engineering platforms that scale.</p>
+          <p class="terminal-line"><span class="prompt">$</span> <span class="cursor-blink">_</span></p>
+        </div>
+      </div>
+
+      <div class="hero-cta reveal">
+        <a href="#contact" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Contact Me
+        </a>
+        <a href="assets/Faraz_Islam_CV.pdf" class="btn btn-secondary" id="downloadCv" download>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+      </div>
+
+      <!-- Floating cloud icons -->
+      <div class="floating-icons" aria-hidden="true">
+        <span class="float-icon icon-azure" style="--delay:0s;--x:10%;--y:20%">☁️</span>
+        <span class="float-icon icon-docker" style="--delay:2s;--x:85%;--y:15%">🐳</span>
+        <span class="float-icon icon-k8s" style="--delay:4s;--x:75%;--y:70%">⎈</span>
+        <span class="float-icon icon-terraform" style="--delay:1s;--x:15%;--y:75%">🔷</span>
+        <span class="float-icon icon-pipeline" style="--delay:3s;--x:50%;--y:10%">⚙️</span>
+        <span class="float-icon icon-lock" style="--delay:5s;--x:90%;--y:50%">🔒</span>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="scroll-text">scroll</span>
+      <span class="scroll-arrow">↓</span>
+    </div>
+  </section>
+
+  <!-- ═══════════ ABOUT ═══════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-icon">👤</span>
+        <span class="title-tag">&lt;</span>About Me<span class="title-tag"> /&gt;</span>
+      </h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="about-intro">
+            I'm a <strong>Senior Azure DevOps &amp; Cloud Platform Engineer</strong> with deep expertise in
+            designing, building, and managing enterprise‑grade cloud infrastructure and CI/CD platforms.
+          </p>
+          <p>
+            With years of hands‑on experience across <strong>Azure</strong> and <strong>AWS</strong>,
+            I specialise in Infrastructure as Code, GitOps workflows, pipeline automation, and platform
+            engineering. I'm passionate about enabling developer velocity through self‑service platforms,
+            enforcing cloud governance at scale, and embedding security into every stage of the delivery pipeline.
+          </p>
+          <p>
+            I believe in <em>automating everything that can be automated</em>, building systems that are
+            observable, resilient, and repeatable — and empowering teams to ship with confidence.
+          </p>
+        </div>
+
+        <div class="about-highlights reveal">
+          <div class="highlight-card">
+            <div class="highlight-icon">🏗️</div>
+            <h3>Platform Engineering</h3>
+            <p>Designing internal developer platforms and self‑service infrastructure.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🔄</div>
+            <h3>CI/CD Mastery</h3>
+            <p>End‑to‑end pipeline design with Azure DevOps, GitHub Actions &amp; TFS.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🛡️</div>
+            <h3>DevSecOps</h3>
+            <p>Shift‑left security with policy‑as‑code, scanning, and compliance gates.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">☁️</div>
+            <h3>Cloud Architecture</h3>
+            <p>Multi‑cloud design across Azure &amp; AWS with cost optimisation and HA.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ═══════════ SKILLS ═══════════ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-icon">⚡</span>
+        <span class="title-tag">&lt;</span>Skills<span class="title-tag"> /&gt;</span>
+      </h2>
+
+      <div class="skills-grid">
+        <!-- Cloud -->
+        <div class="skill-category reveal" data-category="cloud">
+          <div class="skill-cat-header">
+            <span class="cat-icon">☁️</span>
+            <h3>Cloud Platforms</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-chip" data-level="95">
+              <span class="chip-name">Azure</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:95%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="80">
+              <span class="chip-name">AWS</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:80%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DevOps -->
+        <div class="skill-category reveal" data-category="devops">
+          <div class="skill-cat-header">
+            <span class="cat-icon">🔄</span>
+            <h3>DevOps &amp; CI/CD</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-chip" data-level="95">
+              <span class="chip-name">Azure DevOps (ADO)</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:95%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="90">
+              <span class="chip-name">GitHub Actions</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:90%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="85">
+              <span class="chip-name">TFS</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- IaC -->
+        <div class="skill-category reveal" data-category="iac">
+          <div class="skill-cat-header">
+            <span class="cat-icon">📜</span>
+            <h3>Infrastructure as Code</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-chip" data-level="95">
+              <span class="chip-name">Terraform</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:95%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="90">
+              <span class="chip-name">Bicep</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:90%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="85">
+              <span class="chip-name">CloudFormation</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Containers -->
+        <div class="skill-category reveal" data-category="containers">
+          <div class="skill-cat-header">
+            <span class="cat-icon">🐳</span>
+            <h3>Containers &amp; Orchestration</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-chip" data-level="90">
+              <span class="chip-name">AKS</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:90%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="80">
+              <span class="chip-name">EKS</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:80%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="92">
+              <span class="chip-name">Docker</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:92%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Automation -->
+        <div class="skill-category reveal" data-category="automation">
+          <div class="skill-cat-header">
+            <span class="cat-icon">🤖</span>
+            <h3>Automation &amp; Scripting</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-chip" data-level="95">
+              <span class="chip-name">PowerShell</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:95%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="88">
+              <span class="chip-name">Bash</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:88%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="95">
+              <span class="chip-name">YAML Pipelines</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:95%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category reveal" data-category="tools">
+          <div class="skill-cat-header">
+            <span class="cat-icon">🧰</span>
+            <h3>Tools &amp; Platforms</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-chip" data-level="90">
+              <span class="chip-name">JFrog Artifactory</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:90%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="88">
+              <span class="chip-name">Jira</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:88%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="85">
+              <span class="chip-name">Confluence</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="95">
+              <span class="chip-name">GitHub</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:95%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="85">
+              <span class="chip-name">Bitbucket</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="92">
+              <span class="chip-name">Azure Repos</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:92%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ EXPERIENCE ═══════════ -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-icon">💼</span>
+        <span class="title-tag">&lt;</span>Experience<span class="title-tag"> /&gt;</span>
+      </h2>
+
+      <div class="timeline">
+        <!-- Role 1: Veeam Software -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+            <span class="marker-line"></span>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div class="card-meta">
+                <span class="card-date">Aug 2024 — Present</span>
+                <span class="card-status running">● Running</span>
+              </div>
+              <h3 class="card-title">Experienced Cloud Platform Engineer</h3>
+              <p class="card-company">Veeam Software — Berlin, Germany <span class="card-location">(Remote)</span></p>
+            </div>
+            <div class="card-body">
+              <h4>Key Contributions</h4>
+              <ul>
+                <li>Developed Azure Landing Zone–aligned architectures using Terraform and Bicep, increasing provisioning consistency by <strong>70%</strong> and cutting environment setup time from days to under 2 hours</li>
+                <li>Standardised AKS clusters across environments, decreasing configuration drift by <strong>60%</strong> and boosting deployment reliability by <strong>40%</strong></li>
+                <li>Implemented AWS EKS clusters with secure networking (VPC, PrivateLink, Security Groups), improving workload isolation and achieving <strong>80%</strong> compliance</li>
+                <li>Designed hybrid Azure–AWS architectures for cross‑cloud workloads, improving service resilience by <strong>30%</strong> and reducing vendor lock‑in</li>
+                <li>Created umbrella CI/CD pipelines in Azure DevOps for coordinated deployment of <strong>20+</strong> microservices, decreasing release effort by <strong>50%</strong></li>
+                <li>Established OpenTelemetry collectors and Grafana dashboards, refining MTTR by <strong>35%</strong> and enabling real‑time observability</li>
+                <li>Optimised Docker images and artifact workflows, reducing image size by up to <strong>45%</strong> and enhancing build times by <strong>30%</strong></li>
+                <li>Enforced platform security using NSGs, Private DNS Zones, and Azure Policies, achieving <strong>75%</strong> policy compliance</li>
+                <li>Built Terraform modules supporting both Azure and AWS, standardising provisioning across clouds and reducing IaC duplication by <strong>40%</strong></li>
+                <li>Integrated CloudWatch and AWS X‑Ray with OpenTelemetry pipelines, improving distributed tracing coverage by <strong>45%</strong></li>
+                <li>Optimised AWS compute and storage costs using rightsizing and lifecycle policies, reducing monthly spend by <strong>20%</strong></li>
+                <li>Facilitated architecture reviews and technical workshops, accelerating cloud adoption and lowering design ambiguity by <strong>50%</strong></li>
+                <li>Systematised operational notifications via Power Automate, boosting stakeholder visibility and lowering manual communication overhead by <strong>80%</strong></li>
+              </ul>
+              <div class="card-tags">
+                <span class="tag">Azure</span><span class="tag">AWS</span><span class="tag">Terraform</span>
+                <span class="tag">Bicep</span><span class="tag">AKS</span><span class="tag">EKS</span>
+                <span class="tag">Azure DevOps</span><span class="tag">Docker</span><span class="tag">OpenTelemetry</span>
+                <span class="tag">Grafana</span><span class="tag">CloudWatch</span><span class="tag">Azure Policy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 2: Quipu — Deputy Head -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+            <span class="marker-line"></span>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div class="card-meta">
+                <span class="card-date">Apr 2024 — Jul 2024</span>
+                <span class="card-status completed">✓ Completed</span>
+              </div>
+              <h3 class="card-title">Deputy Head of Digital Experience Department</h3>
+              <p class="card-company">Quipu GmbH — Frankfurt, Germany <span class="card-location">(Hybrid)</span></p>
+            </div>
+            <div class="card-body">
+              <h4>Key Contributions</h4>
+              <ul>
+                <li>Directed cloud modernisation initiatives using Azure, elevating platform reliability and performance for <strong>10+</strong> digital services</li>
+                <li>Mentored cross‑functional engineering teams, increasing delivery velocity by <strong>25%</strong> through refined DevOps practices</li>
+                <li>Advanced adoption of Azure DevOps CI/CD pipelines, decreasing deployment friction and enhancing release frequency by <strong>40%</strong></li>
+                <li>Collaborated with business stakeholders to translate requirements into scalable Azure architectures, lowering rework by <strong>30%</strong></li>
+                <li>Introduced governance frameworks that boosted service uptime and decreased incident volume by <strong>20%</strong></li>
+              </ul>
+              <div class="card-tags">
+                <span class="tag">Azure</span><span class="tag">Azure DevOps</span><span class="tag">Leadership</span>
+                <span class="tag">Cloud Architecture</span><span class="tag">Governance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 3: Quipu — Coordinator of Automations -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+            <span class="marker-line"></span>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div class="card-meta">
+                <span class="card-date">Nov 2022 — Mar 2024</span>
+                <span class="card-status completed">✓ Completed</span>
+              </div>
+              <h3 class="card-title">Coordinator of Automations</h3>
+              <p class="card-company">Quipu GmbH — Frankfurt, Germany <span class="card-location">(Hybrid)</span></p>
+            </div>
+            <div class="card-body">
+              <h4>Key Contributions</h4>
+              <ul>
+                <li>Led a globally distributed automation engineering team, enhancing collaboration and delivery efficiency by <strong>30%</strong></li>
+                <li>Applied Infrastructure as Code (IaC) using Terraform and Azure DevOps, decreasing provisioning time from hours to minutes</li>
+                <li>Modernised hybrid cloud environments, lowering operational incidents by <strong>25%</strong> and strengthening system stability</li>
+                <li>Refined CI/CD workflows with Azure DevOps Boards and Pipelines, boosting deployment success rates by <strong>35%</strong></li>
+                <li>Delivered automation solutions that saved <strong>50+ hours</strong> per month across teams</li>
+              </ul>
+              <div class="card-tags">
+                <span class="tag">Terraform</span><span class="tag">Azure DevOps</span><span class="tag">IaC</span>
+                <span class="tag">Hybrid Cloud</span><span class="tag">Team Leadership</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 4: Quipu — Agile Automation Engineer -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+            <span class="marker-line"></span>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div class="card-meta">
+                <span class="card-date">May 2018 — Oct 2022</span>
+                <span class="card-status completed">✓ Completed</span>
+              </div>
+              <h3 class="card-title">Agile Automation Engineer</h3>
+              <p class="card-company">Quipu GmbH — Frankfurt, Germany</p>
+            </div>
+            <div class="card-body">
+              <h4>Key Contributions</h4>
+              <ul>
+                <li>Engineered automation solutions across Azure PaaS, SaaS, and IaaS, enhancing operational efficiency by <strong>30%</strong></li>
+                <li>Developed microservices and cloud‑native applications, lowering service latency and improving scalability</li>
+                <li>Executed CI/CD pipelines that decreased deployment time by <strong>40%</strong> and strengthened release reliability</li>
+                <li>Supported Azure Virtual Desktop, API Management, and enterprise cloud workloads, boosting service availability and user satisfaction</li>
+              </ul>
+              <div class="card-tags">
+                <span class="tag">Azure PaaS</span><span class="tag">CI/CD</span><span class="tag">Microservices</span>
+                <span class="tag">Automation</span><span class="tag">AVD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 5: Quipu — Student Intern -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <span class="marker-dot"></span>
+            <span class="marker-line"></span>
+          </div>
+          <div class="timeline-card">
+            <div class="card-header">
+              <div class="card-meta">
+                <span class="card-date">May 2017 — May 2018</span>
+                <span class="card-status completed">✓ Completed</span>
+              </div>
+              <h3 class="card-title">Student Intern</h3>
+              <p class="card-company">Quipu GmbH — Frankfurt, Germany</p>
+            </div>
+            <div class="card-body">
+              <h4>Key Contributions</h4>
+              <ul>
+                <li>Performed statistical data analysis and cloud administration tasks, refining reporting accuracy by <strong>20%</strong></li>
+                <li>Assisted Azure ML experiments and data modelling workflows, accelerating research cycles</li>
+                <li>Enhanced ServiceDesk operations by streamlining ticket triage and decreasing resolution time by <strong>15%</strong></li>
+              </ul>
+              <div class="card-tags">
+                <span class="tag">Azure</span><span class="tag">Data Analysis</span><span class="tag">Azure ML</span>
+                <span class="tag">ServiceDesk</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROJECTS ═══════════ -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-icon">🚀</span>
+        <span class="title-tag">&lt;</span>Projects<span class="title-tag"> /&gt;</span>
+      </h2>
+      <p class="section-subtitle reveal">Open‑source IaC repos &amp; enterprise platform engineering work.</p>
+
+      <div class="projects-grid">
+        <!-- Project 1: AKS Production Cluster -->
+        <div class="project-card reveal">
+          <div class="project-pipeline-header">
+            <span class="pipeline-stage passed">Build</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Deploy</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Scale</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Live ✓</span>
+          </div>
+          <h3 class="project-title">AKS Production Cluster</h3>
+          <p class="project-desc">
+            Highly scalable AKS cluster infrastructure (Zone‑Spanned &amp; Zone‑Aligned) defined in Bicep IaC
+            with Docker, Helm 3, Azure Container Registry, and Azure DevOps CI/CD pipelines for
+            fully automated deployments.
+          </p>
+          <div class="project-code">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">main.bicep</span>
+            </div>
+            <pre><code><span class="bicep-key">resource</span> aksCluster <span class="bicep-type">'Microsoft.ContainerService/managedClusters@2024-01-01'</span> = {
+  <span class="bicep-key">name:</span> <span class="tf-str">'aks-prod-cluster'</span>
+  <span class="bicep-key">location:</span> resourceGroup().location
+  <span class="bicep-key">properties:</span> {
+    <span class="bicep-key">agentPoolProfiles:</span> [{
+      <span class="bicep-key">name:</span> <span class="tf-str">'systempool'</span>
+      <span class="bicep-key">count:</span> <span class="tf-num">3</span>
+      <span class="bicep-key">vmSize:</span> <span class="tf-str">'Standard_D4s_v3'</span>
+      <span class="bicep-key">availabilityZones:</span> [<span class="tf-str">'1'</span>, <span class="tf-str">'2'</span>, <span class="tf-str">'3'</span>]
+      <span class="bicep-key">mode:</span> <span class="tf-str">'System'</span>
+    }]
+  }
+}</code></pre>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Bicep</span><span class="tag">AKS</span><span class="tag">Docker</span>
+            <span class="tag">Helm 3</span><span class="tag">ACR</span><span class="tag">Azure DevOps</span>
+          </div>
+          <a href="https://github.com/islamfaraz/aks-production-cluster" class="project-link" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+
+        <!-- Project 2: AWS Open Data Lake -->
+        <div class="project-card reveal">
+          <div class="project-pipeline-header">
+            <span class="pipeline-stage passed">Ingest</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Process</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Query</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Live ✓</span>
+          </div>
+          <h3 class="project-title">AWS Environmental Monitoring Data Lake</h3>
+          <p class="project-desc">
+            Open data lake for environmental monitoring on AWS, built with Terraform IaC.
+            Ingests IoT sensor data through Kinesis, processes with Glue ETL, stores in S3,
+            and enables serverless querying via Athena — deployed through Azure DevOps pipelines.
+          </p>
+          <div class="project-code">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">main.tf</span>
+            </div>
+            <pre><code><span class="tf-key">module</span> <span class="tf-str">"data_lake"</span> {
+  <span class="tf-key">source</span> = <span class="tf-str">"./modules/datalake"</span>
+
+  <span class="tf-key">bucket_name</span>   = <span class="tf-str">"env-monitoring-lake"</span>
+  <span class="tf-key">kinesis_stream</span> = <span class="tf-str">"iot-sensor-stream"</span>
+  <span class="tf-key">glue_database</span> = <span class="tf-str">"environmental_db"</span>
+  <span class="tf-key">enable_athena</span> = <span class="tf-bool">true</span>
+  <span class="tf-key">iot_core_rule</span> = <span class="tf-str">"sensor_ingestion"</span>
+}</code></pre>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Terraform</span><span class="tag">AWS</span><span class="tag">S3</span>
+            <span class="tag">Kinesis</span><span class="tag">Glue</span><span class="tag">Athena</span>
+            <span class="tag">IoT Core</span><span class="tag">Azure DevOps</span>
+          </div>
+          <a href="https://github.com/islamfaraz/aws-open-datalake-terraform" class="project-link" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+
+        <!-- Project 3: AWS Disaster Response -->
+        <div class="project-card reveal">
+          <div class="project-pipeline-header">
+            <span class="pipeline-stage passed">Detect</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Process</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Notify</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Live ✓</span>
+          </div>
+          <h3 class="project-title">AWS Real‑Time Disaster Response Network</h3>
+          <p class="project-desc">
+            Serverless real‑time disaster response system on AWS defined with CloudFormation.
+            Uses Lambda for event processing, DynamoDB for state management, API Gateway for
+            external interfaces, and SNS/SQS for alert fan‑out — orchestrated via Azure DevOps CI/CD.
+          </p>
+          <div class="project-code">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">template.yaml</span>
+            </div>
+            <pre><code><span class="yaml-key">AWSTemplateFormatVersion:</span> <span class="yaml-val">'2010-09-09'</span>
+<span class="yaml-key">Resources:</span>
+  <span class="yaml-key">DisasterAlertQueue:</span>
+    <span class="yaml-key">Type:</span> <span class="yaml-val">AWS::SQS::Queue</span>
+    <span class="yaml-key">Properties:</span>
+      <span class="yaml-key">QueueName:</span> <span class="yaml-val">disaster-alert-queue</span>
+      <span class="yaml-key">VisibilityTimeout:</span> <span class="tf-num">300</span>
+  <span class="yaml-key">ResponseFunction:</span>
+    <span class="yaml-key">Type:</span> <span class="yaml-val">AWS::Lambda::Function</span>
+    <span class="yaml-key">Properties:</span>
+      <span class="yaml-key">Runtime:</span> <span class="yaml-val">python3.12</span>
+      <span class="yaml-key">Handler:</span> <span class="yaml-val">index.handler</span></code></pre>
+          </div>
+          <div class="project-tags">
+            <span class="tag">CloudFormation</span><span class="tag">AWS</span><span class="tag">Lambda</span>
+            <span class="tag">DynamoDB</span><span class="tag">API Gateway</span><span class="tag">SNS/SQS</span>
+          </div>
+          <a href="https://github.com/islamfaraz/aws-disaster-response-cloudformation" class="project-link" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+
+        <!-- Project 4: Azure Smart Education Hub -->
+        <div class="project-card reveal">
+          <div class="project-pipeline-header">
+            <span class="pipeline-stage passed">Plan</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Validate</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Apply</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Live ✓</span>
+          </div>
+          <h3 class="project-title">Azure Smart Education Hub</h3>
+          <p class="project-desc">
+            Intelligent education platform on Azure provisioned with Terraform.
+            Leverages Cognitive Services for AI‑powered features, Azure SQL for data persistence,
+            App Service for hosting, Redis Cache for performance, and CDN for global delivery —
+            with full CI/CD through Azure DevOps.
+          </p>
+          <div class="project-code">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">main.tf</span>
+            </div>
+            <pre><code><span class="tf-key">module</span> <span class="tf-str">"education_hub"</span> {
+  <span class="tf-key">source</span> = <span class="tf-str">"./modules/education"</span>
+
+  <span class="tf-key">app_service_plan</span> = <span class="tf-str">"premium-v3"</span>
+  <span class="tf-key">sql_database</span>     = <span class="tf-str">"education-db"</span>
+  <span class="tf-key">redis_cache_sku</span>  = <span class="tf-str">"Standard"</span>
+  <span class="tf-key">cognitive_svc</span>    = <span class="tf-str">"text-analytics"</span>
+  <span class="tf-key">cdn_profile</span>      = <span class="tf-str">"global-cdn"</span>
+  <span class="tf-key">enable_monitoring</span> = <span class="tf-bool">true</span>
+}</code></pre>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Terraform</span><span class="tag">Azure</span><span class="tag">Cognitive Services</span>
+            <span class="tag">SQL</span><span class="tag">Redis</span><span class="tag">CDN</span>
+            <span class="tag">App Service</span>
+          </div>
+          <a href="https://github.com/islamfaraz/azure-smart-education-terraform" class="project-link" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+
+        <!-- Project 5: Azure Community Health -->
+        <div class="project-card reveal">
+          <div class="project-pipeline-header">
+            <span class="pipeline-stage passed">Collect</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Analyse</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Serve</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Live ✓</span>
+          </div>
+          <h3 class="project-title">Azure Community Health Analytics Platform</h3>
+          <p class="project-desc">
+            Event‑driven health analytics platform on Azure defined in Bicep IaC.
+            Streams community health data through Event Hub, processes with Azure Functions,
+            stores in Cosmos DB, and exposes APIs via API Management — with CI/CD
+            powered by Azure DevOps.
+          </p>
+          <div class="project-code">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">main.bicep</span>
+            </div>
+            <pre><code><span class="bicep-key">resource</span> cosmosAccount <span class="bicep-type">'Microsoft.DocumentDB/databaseAccounts@2024-02-15'</span> = {
+  <span class="bicep-key">name:</span> <span class="tf-str">'health-cosmos-db'</span>
+  <span class="bicep-key">location:</span> resourceGroup().location
+  <span class="bicep-key">properties:</span> {
+    <span class="bicep-key">databaseAccountOfferType:</span> <span class="tf-str">'Standard'</span>
+    <span class="bicep-key">locations:</span> [{
+      <span class="bicep-key">locationName:</span> resourceGroup().location
+      <span class="bicep-key">failoverPriority:</span> <span class="tf-num">0</span>
+    }]
+  }
+}</code></pre>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Bicep</span><span class="tag">Azure</span><span class="tag">Cosmos DB</span>
+            <span class="tag">Event Hub</span><span class="tag">Functions</span><span class="tag">APIM</span>
+          </div>
+          <a href="https://github.com/islamfaraz/azure-community-health-bicep" class="project-link" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+
+        <!-- Project 6: Enterprise CI/CD Platform -->
+        <div class="project-card reveal">
+          <div class="project-pipeline-header">
+            <span class="pipeline-stage passed">Build</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Test</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Deploy</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Live ✓</span>
+          </div>
+          <h3 class="project-title">Enterprise CI/CD Platform</h3>
+          <p class="project-desc">
+            Designed a centralised CI/CD platform on Azure DevOps serving 50+ teams with templated YAML
+            pipelines, automated quality gates, security scanning, and artifact promotion through
+            JFrog Artifactory.
+          </p>
+          <div class="project-code">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">azure-pipelines.yml</span>
+            </div>
+            <pre><code><span class="yaml-key">trigger:</span>
+  <span class="yaml-key">branches:</span>
+    <span class="yaml-key">include:</span> [<span class="yaml-val">main</span>, <span class="yaml-val">release/*</span>]
+
+<span class="yaml-key">stages:</span>
+  - <span class="yaml-key">stage:</span> <span class="yaml-val">Build</span>
+    <span class="yaml-key">jobs:</span>
+      - <span class="yaml-key">template:</span> <span class="yaml-val">templates/build.yml</span>
+  - <span class="yaml-key">stage:</span> <span class="yaml-val">SecurityScan</span>
+    <span class="yaml-key">jobs:</span>
+      - <span class="yaml-key">template:</span> <span class="yaml-val">templates/devsecops.yml</span>
+  - <span class="yaml-key">stage:</span> <span class="yaml-val">Deploy</span>
+    <span class="yaml-key">condition:</span> <span class="yaml-val">succeeded()</span>
+    <span class="yaml-key">jobs:</span>
+      - <span class="yaml-key">deployment:</span> <span class="yaml-val">Production</span>
+        <span class="yaml-key">environment:</span> <span class="yaml-val">prod</span></code></pre>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Azure DevOps</span><span class="tag">YAML</span><span class="tag">JFrog</span>
+            <span class="tag">DevSecOps</span>
+          </div>
+        </div>
+
+        <!-- Project 7: Terraform Module Library -->
+        <div class="project-card reveal">
+          <div class="project-pipeline-header">
+            <span class="pipeline-stage passed">Plan</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Validate</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Apply</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Live ✓</span>
+          </div>
+          <h3 class="project-title">Terraform Module Library</h3>
+          <p class="project-desc">
+            Built a comprehensive library of reusable, versioned Terraform modules for Azure landing zones
+            — including networking, compute, storage, AKS clusters, and RBAC — with automated testing
+            and CI/CD‑driven module publishing.
+          </p>
+          <div class="project-code">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">main.tf</span>
+            </div>
+            <pre><code><span class="tf-key">module</span> <span class="tf-str">"aks_cluster"</span> {
+  <span class="tf-key">source</span>  = <span class="tf-str">"./modules/aks"</span>
+  <span class="tf-key">version</span> = <span class="tf-str">"3.2.0"</span>
+
+  <span class="tf-key">cluster_name</span>    = <span class="tf-str">"prod-aks-01"</span>
+  <span class="tf-key">resource_group</span>  = azurerm_resource_group.main.name
+  <span class="tf-key">node_count</span>      = <span class="tf-num">5</span>
+  <span class="tf-key">vm_size</span>         = <span class="tf-str">"Standard_D4s_v3"</span>
+  <span class="tf-key">enable_rbac</span>     = <span class="tf-bool">true</span>
+  <span class="tf-key">enable_monitoring</span> = <span class="tf-bool">true</span>
+}</code></pre>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Terraform</span><span class="tag">Azure</span><span class="tag">AKS</span>
+            <span class="tag">IaC</span>
+          </div>
+        </div>
+
+        <!-- Project 8: GitOps Kubernetes Platform -->
+        <div class="project-card reveal">
+          <div class="project-pipeline-header">
+            <span class="pipeline-stage passed">Commit</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Sync</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Reconcile</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Live ✓</span>
+          </div>
+          <h3 class="project-title">GitOps Kubernetes Platform</h3>
+          <p class="project-desc">
+            Implemented a GitOps‑driven Kubernetes platform on AKS using Flux CD.
+            All cluster configuration, Helm releases, and policies are version‑controlled
+            and automatically reconciled from Git.
+          </p>
+          <div class="project-code">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">kustomization.yaml</span>
+            </div>
+            <pre><code><span class="yaml-key">apiVersion:</span> <span class="yaml-val">kustomize.toolkit.fluxcd.io/v1</span>
+<span class="yaml-key">kind:</span> <span class="yaml-val">Kustomization</span>
+<span class="yaml-key">metadata:</span>
+  <span class="yaml-key">name:</span> <span class="yaml-val">platform-config</span>
+  <span class="yaml-key">namespace:</span> <span class="yaml-val">flux-system</span>
+<span class="yaml-key">spec:</span>
+  <span class="yaml-key">interval:</span> <span class="yaml-val">5m</span>
+  <span class="yaml-key">path:</span> <span class="yaml-val">./clusters/prod</span>
+  <span class="yaml-key">prune:</span> <span class="yaml-val">true</span>
+  <span class="yaml-key">sourceRef:</span>
+    <span class="yaml-key">kind:</span> <span class="yaml-val">GitRepository</span>
+    <span class="yaml-key">name:</span> <span class="yaml-val">platform-repo</span></code></pre>
+          </div>
+          <div class="project-tags">
+            <span class="tag">GitOps</span><span class="tag">AKS</span><span class="tag">Flux CD</span>
+            <span class="tag">Kubernetes</span>
+          </div>
+        </div>
+
+        <!-- Project 9: Cloud Observability Stack -->
+        <div class="project-card reveal">
+          <div class="project-pipeline-header">
+            <span class="pipeline-stage passed">Collect</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Aggregate</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Alert</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Live ✓</span>
+          </div>
+          <h3 class="project-title">Cloud Observability Stack</h3>
+          <p class="project-desc">
+            Deployed a full observability stack with Azure Monitor, Log Analytics, Grafana, and
+            Prometheus for AKS. Built custom dashboards, alerting rules, and automated incident
+            response workflows.
+          </p>
+          <div class="project-code">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">monitoring.bicep</span>
+            </div>
+            <pre><code><span class="bicep-key">resource</span> workspace <span class="bicep-type">'Microsoft.OperationalInsights/workspaces@2022-10-01'</span> = {
+  <span class="bicep-key">name:</span> <span class="tf-str">'log-analytics-prod'</span>
+  <span class="bicep-key">location:</span> resourceGroup().location
+  <span class="bicep-key">properties:</span> {
+    <span class="bicep-key">sku:</span> { <span class="bicep-key">name:</span> <span class="tf-str">'PerGB2018'</span> }
+    <span class="bicep-key">retentionInDays:</span> <span class="tf-num">90</span>
+  }
+}</code></pre>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Monitoring</span><span class="tag">Bicep</span><span class="tag">Grafana</span>
+            <span class="tag">Prometheus</span>
+          </div>
+        </div>
+
+        <!-- Project 10: DevSecOps Pipeline Framework -->
+        <div class="project-card reveal">
+          <div class="project-pipeline-header">
+            <span class="pipeline-stage passed">Push</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Scan</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Gate</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Ship ✓</span>
+          </div>
+          <h3 class="project-title">DevSecOps Pipeline Framework</h3>
+          <p class="project-desc">
+            Built a reusable DevSecOps pipeline template integrating SAST, DAST, SCA, container
+            image scanning, and compliance checks — with automated policy gates that block
+            non‑compliant deployments.
+          </p>
+          <div class="project-code">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">security-scan.yml</span>
+            </div>
+            <pre><code><span class="yaml-key">name:</span> <span class="yaml-val">DevSecOps Pipeline</span>
+<span class="yaml-key">on:</span> [<span class="yaml-val">push</span>, <span class="yaml-val">pull_request</span>]
+
+<span class="yaml-key">jobs:</span>
+  <span class="yaml-key">security-scan:</span>
+    <span class="yaml-key">runs-on:</span> <span class="yaml-val">ubuntu-latest</span>
+    <span class="yaml-key">steps:</span>
+      - <span class="yaml-key">uses:</span> <span class="yaml-val">actions/checkout@v4</span>
+      - <span class="yaml-key">name:</span> <span class="yaml-val">Run Trivy Scan</span>
+        <span class="yaml-key">uses:</span> <span class="yaml-val">aquasecurity/trivy-action@master</span>
+        <span class="yaml-key">with:</span>
+          <span class="yaml-key">scan-type:</span> <span class="yaml-val">fs</span>
+          <span class="yaml-key">severity:</span> <span class="yaml-val">CRITICAL,HIGH</span></code></pre>
+          </div>
+          <div class="project-tags">
+            <span class="tag">GitHub Actions</span><span class="tag">DevSecOps</span><span class="tag">Trivy</span>
+            <span class="tag">Security</span>
+          </div>
+        </div>
+
+        <!-- Project 11: Cloud Governance & Cost Automation -->
+        <div class="project-card reveal">
+          <div class="project-pipeline-header">
+            <span class="pipeline-stage passed">Assess</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Audit</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Enforce</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Governed ✓</span>
+          </div>
+          <h3 class="project-title">Cloud Governance &amp; Cost Automation</h3>
+          <p class="project-desc">
+            Implemented Azure Policy, cost management automation, and tagging enforcement across
+            100+ subscriptions. Built PowerShell‑based cost reporting and anomaly detection that
+            saved over $200K annually.
+          </p>
+          <div class="project-code">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">cost-report.ps1</span>
+            </div>
+            <pre><code><span class="ps-comment"># Automated cost anomaly detection</span>
+<span class="ps-var">$subscriptions</span> = Get-AzSubscription
+<span class="ps-key">foreach</span> (<span class="ps-var">$sub</span> <span class="ps-key">in</span> <span class="ps-var">$subscriptions</span>) {
+  Set-AzContext -Subscription <span class="ps-var">$sub</span>.Id
+  <span class="ps-var">$cost</span> = Get-AzConsumptionUsageDetail `
+    -StartDate (Get-Date).AddDays(-7) `
+    -EndDate (Get-Date)
+  <span class="ps-key">if</span> (<span class="ps-var">$cost</span>.Total -gt <span class="ps-var">$threshold</span>) {
+    Send-AlertNotification -Sub <span class="ps-var">$sub</span>.Name
+  }
+}</code></pre>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Azure Policy</span><span class="tag">PowerShell</span><span class="tag">FinOps</span>
+            <span class="tag">Governance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-icon">📬</span>
+        <span class="title-tag">&lt;</span>Contact<span class="title-tag"> /&gt;</span>
+      </h2>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="contact-intro">
+            Have a project in mind or want to discuss cloud &amp; DevOps? Let's connect.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:faraz.islam@veeam.com" class="contact-link">
+              <span class="contact-link-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <span>faraz.islam@veeam.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/faraz-islam/" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-link-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </span>
+              <span>LinkedIn Profile</span>
+            </a>
+            <a href="https://github.com/islamfaraz" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <span class="contact-link-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </span>
+              <span>GitHub Profile</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xgonopja" method="POST" novalidate>
+          <div class="form-group">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" name="name" required autocomplete="name" placeholder="Your name" maxlength="100" />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" name="email" required autocomplete="email" placeholder="you@example.com" maxlength="254" />
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <input type="text" id="contactSubject" name="subject" required placeholder="What's this about?" maxlength="200" />
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="5" required placeholder="Your message..." maxlength="2000"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+          <p class="form-note">Powered by Formspree — your message goes straight to my inbox.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">
+        <span class="logo-bracket">&lt;</span>Faraz Islam<span class="logo-bracket"> /&gt;</span>
+      </p>
+      <p class="footer-copy">&copy; <span id="footerYear"></span> — Built with passion &amp; automation.</p>
+
+      <!-- Impressum (German legal disclaimer) -->
+      <div class="footer-impressum">
+        <h4>Impressum</h4>
+        <p>Angaben gem&auml;&szlig; &sect; 5 TMG</p>
+        <p>
+          Faraz Islam<br />
+          Berlin, Germany
+        </p>
+        <p>
+          <strong>Kontakt:</strong><br />
+          E‑Mail: <a href="mailto:faraz.islam@veeam.com">faraz.islam@veeam.com</a>
+        </p>
+        <p class="footer-haftung">
+          <strong>Haftungsausschluss:</strong> Die Inhalte dieser Website wurden mit gr&ouml;&szlig;ter Sorgfalt erstellt.
+          F&uuml;r die Richtigkeit, Vollst&auml;ndigkeit und Aktualit&auml;t der Inhalte wird jedoch keine Gew&auml;hr &uuml;bernommen.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/faraz-islam/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com/islamfaraz" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
