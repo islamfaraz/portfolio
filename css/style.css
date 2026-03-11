@@ -28,7 +28,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-align: justify;
 }
 
 :root {
@@ -74,6 +73,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: justify;
 }
 
 a {
@@ -95,6 +95,14 @@ ul { list-style: none; }
   background: var(--primary);
   color: #fff;
 }
+
+/* Text alignment overrides — justified body with targeted exceptions */
+h1, h2, h3, h4, h5, h6 { text-align: left; }
+.section-title, .highlight-icon, .form-note { text-align: center; }
+.btn, .btn-full { text-align: center; }
+.terminal-body, .project-code pre, code, .code-header { text-align: left; }
+.form-group label { text-align: left; }
+.pipeline-stage, .badge, .tag { text-align: center; }
 
 /* ─── Utility ─────────────────────────────────────────────── */
 .container {
@@ -359,11 +367,18 @@ ul { list-style: none; }
   .pipeline-arrow { font-size: 0.7rem; }
 
   /* Contact */
-  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+  .contact-info {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 24px;
+  }
   .contact-form { padding: 20px; }
 
   /* Footer */
   .footer-inner { flex-direction: column; text-align: center; }
+  .footer-impressum h4 { text-align: center; }
 }
 
 @media (max-width: 480px) {
@@ -371,8 +386,15 @@ ul { list-style: none; }
   .section { padding: 48px 0; }
   .section-title { margin-bottom: 28px; font-size: 1.35rem; gap: 8px; flex-wrap: wrap; }
 
+  /* Text alignment — left on narrow phones */
+  body { text-align: left; }
+
   /* About */
-  .about-highlights { grid-template-columns: 1fr; }
+  .about-highlights { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .highlight-card { padding: 16px; }
+  .highlight-icon { font-size: 1.5rem; margin-bottom: 8px; }
+  .highlight-card h3 { font-size: 0.85rem; }
+  .highlight-card p { font-size: 0.78rem; }
   .about-text p { font-size: 0.95rem; }
 
   /* Skills */
@@ -413,6 +435,8 @@ ul { list-style: none; }
   .pipeline-arrow { font-size: 0.6rem; }
   .card-title { font-size: 0.95rem; }
   .card-date { font-size: 0.72rem; }
+  .about-highlights { grid-template-columns: 1fr; }
+  .highlight-card { padding: 14px; }
 }
 
 /* ─── Hero Section ────────────────────────────────────────── */
