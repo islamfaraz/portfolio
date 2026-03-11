@@ -10,3 +10,6 @@ desktop.ini
 
 # Node (if added later)
 node_modules/
+
+# Project context
+claude.md
