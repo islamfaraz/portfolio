@@ -315,6 +315,105 @@ ul { list-style: none; }
   .nav-toggle { display: flex; }
 }
 
+/* ─── Mobile Master Breakpoint ────────────────────────────── */
+@media (max-width: 768px) {
+  .section { padding: 60px 0; }
+  .section-title { margin-bottom: 36px; font-size: 1.6rem; }
+
+  /* Hero */
+  .hero { padding: calc(var(--nav-height) + 24px) 16px 40px; min-height: auto; }
+  .hero-content { gap: 24px; }
+  .terminal-body { padding: 16px; font-size: 0.82rem; line-height: 1.8; }
+  .terminal-header { padding: 10px 12px; }
+  .hero-name { font-size: 1.1rem; }
+  .hero-title { font-size: 1.1rem !important; }
+  .hero-subtitle { font-size: 0.85rem; }
+  .terminal-output { padding-left: 12px; }
+  .hero-cta { gap: 12px; }
+  .btn { padding: 10px 20px; font-size: 0.88rem; }
+  .floating-icons { display: none; }
+  .scroll-indicator { display: none; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: 1fr; }
+
+  /* Experience */
+  .timeline-marker { display: none; }
+  .timeline-item { gap: 0; }
+  .card-header { padding: 16px 16px 12px; }
+  .card-body { padding: 14px 16px 20px; }
+  .card-title { font-size: 1.05rem; }
+  .card-meta { flex-wrap: wrap; gap: 8px; }
+  .card-company { font-size: 0.85rem; }
+
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card { padding: 20px; }
+  .project-code pre { font-size: 0.7rem; line-height: 1.6; padding: 12px; }
+  .project-title { font-size: 1.05rem; }
+  .pipeline-stage { padding: 3px 6px; font-size: 0.65rem; }
+  .pipeline-arrow { font-size: 0.7rem; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-form { padding: 20px; }
+
+  /* Footer */
+  .footer-inner { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .section { padding: 48px 0; }
+  .section-title { margin-bottom: 28px; font-size: 1.35rem; gap: 8px; flex-wrap: wrap; }
+
+  /* About */
+  .about-highlights { grid-template-columns: 1fr; }
+  .about-text p { font-size: 0.95rem; }
+
+  /* Skills */
+  .skill-category { padding: 20px; }
+  .chip-name { min-width: 90px; font-size: 0.8rem; }
+
+  /* Projects */
+  .project-card { padding: 16px; }
+  .project-pipeline-header { gap: 3px; }
+  .pipeline-stage { padding: 2px 5px; font-size: 0.6rem; }
+  .project-code pre { font-size: 0.65rem; padding: 10px; }
+  .project-desc { font-size: 0.85rem; }
+  .project-link { padding: 8px 14px; font-size: 0.8rem; }
+
+  /* Experience */
+  .card-body li { font-size: 0.85rem; }
+
+  /* Contact */
+  .contact-form { padding: 16px; }
+  .contact-link { padding: 12px 14px; font-size: 0.88rem; }
+  .form-group input, .form-group textarea { padding: 10px 12px; font-size: 0.9rem; }
+
+  /* Footer */
+  .footer-impressum { text-align: center; }
+}
+
+/* Small phones (below 360px) */
+@media (max-width: 360px) {
+  .container { padding: 0 12px; }
+  .btn { padding: 8px 14px; font-size: 0.82rem; }
+  .hero-cta { flex-direction: column; width: 100%; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+  .terminal-body { padding: 12px; font-size: 0.75rem; }
+  .hero-title { font-size: 0.95rem !important; }
+  .section-title { font-size: 1.2rem; }
+  .project-pipeline-header { gap: 2px; }
+  .pipeline-stage { padding: 2px 4px; font-size: 0.55rem; }
+  .pipeline-arrow { font-size: 0.6rem; }
+  .card-title { font-size: 0.95rem; }
+  .card-date { font-size: 0.72rem; }
+}
+
 /* ─── Hero Section ────────────────────────────────────────── */
 .hero {
   min-height: 100vh;
@@ -515,6 +614,14 @@ ul { list-style: none; }
   font-size: 0.85em;
 }
 
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-top: -40px;
+  margin-bottom: 48px;
+}
+
 /* ─── About ───────────────────────────────────────────────── */
 .about-grid {
   display: grid;
@@ -606,24 +713,10 @@ ul { list-style: none; }
   box-shadow: 0 0 12px var(--primary-glow);
 }
 
-@media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-  .about-highlights {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 480px) {
-  .about-highlights {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ─── Skills ──────────────────────────────────────────────── */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
   gap: 24px;
 }
 
@@ -688,13 +781,6 @@ ul { list-style: none; }
 }
 .skill-chip.animated .chip-fill {
   width: var(--fill);
-}
-
-@media (max-width: 480px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-  .chip-name { min-width: 100px; font-size: 0.82rem; }
 }
 
 /* ─── Experience / Timeline ───────────────────────────────── */
@@ -853,16 +939,10 @@ ul { list-style: none; }
   border: 1px solid rgba(0, 120, 212, 0.2);
 }
 
-@media (max-width: 600px) {
-  .timeline-marker { display: none; }
-  .timeline-item { gap: 0; }
-  .card-header, .card-body { padding-left: 20px; padding-right: 20px; }
-}
-
 /* ─── Projects ────────────────────────────────────────────── */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
   gap: 28px;
 }
 
@@ -989,7 +1069,7 @@ ul { list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: auto;
+  margin-top: 16px;
   padding: 10px 20px;
   color: var(--text);
   background: var(--surface);
@@ -1005,12 +1085,6 @@ ul { list-style: none; }
   background: var(--primary);
   border-color: var(--primary);
   color: #fff;
-}
-
-@media (max-width: 480px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* ─── Certifications ──────────────────────────────────────── */
@@ -1193,12 +1267,6 @@ ul { list-style: none; }
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ─── Footer ──────────────────────────────────────────────── */
 .footer {
   border-top: 1px solid var(--border);
@@ -1254,13 +1322,6 @@ ul { list-style: none; }
 .footer-haftung {
   margin-top: 8px;
   font-size: 0.75rem;
-}
-
-@media (max-width: 600px) {
-  .footer-inner {
-    flex-direction: column;
-    text-align: center;
-  }
 }
 
 /* ─── Back to Top ─────────────────────────────────────────── */
