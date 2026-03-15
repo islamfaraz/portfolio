@@ -5,7 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Azure DevOps & Cloud Platform Engineer — Portfolio showcasing expertise in cloud architecture, CI/CD, Infrastructure as Code, and platform engineering." />
   <meta name="theme-color" content="#0078D4" />
-  <title>Faraz Islam | Azure DevOps &amp; Cloud Platform Engineer</title>
+  <title>Faraz Islam | DevOps &amp; Cloud Platform Engineer</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Faraz Islam | DevOps & Cloud Platform Engineer" />
+  <meta property="og:description" content="Portfolio showcasing expertise in cloud architecture, CI/CD, Infrastructure as Code, DevSecOps, and platform engineering." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://islamfaraz.github.io/portfolio/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Faraz Islam | DevOps & Cloud Platform Engineer" />
+  <meta name="twitter:description" content="Portfolio showcasing expertise in cloud architecture, CI/CD, Infrastructure as Code, DevSecOps, and platform engineering." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -82,9 +96,9 @@
   </nav>
 
   <!-- ═══════════ HERO / HOME ═══════════ -->
-  <section id="home" class="hero">
+  <section id="home" class="hero hero-entrance">
     <div class="hero-content">
-      <div class="terminal-window reveal">
+      <div class="terminal-window reveal hero-stagger" style="--stagger:0">
         <div class="terminal-header">
           <span class="terminal-dot red"></span>
           <span class="terminal-dot yellow"></span>
@@ -95,14 +109,14 @@
           <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">whoami</span></p>
           <p class="terminal-output hero-name" id="heroName"></p>
           <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat role.txt</span></p>
-          <h1 class="terminal-output hero-title">Azure DevOps &amp; Cloud Platform Engineer</h1>
+          <h1 class="terminal-output hero-title">DevOps &amp; Cloud Platform Engineer</h1>
           <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">echo $MISSION</span></p>
           <p class="terminal-output hero-subtitle">Building resilient cloud infrastructure, automating everything,<br/>and engineering platforms that scale.</p>
           <p class="terminal-line"><span class="prompt">$</span> <span class="cursor-blink">_</span></p>
         </div>
       </div>
 
-      <div class="hero-cta reveal">
+      <div class="hero-cta reveal hero-stagger" style="--stagger:1">
         <a href="#contact" class="btn btn-primary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Contact Me
@@ -123,7 +137,7 @@
         <span class="float-icon icon-lock" style="--delay:5s;--x:90%;--y:50%">🔒</span>
       </div>
     </div>
-    <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-indicator hero-stagger" style="--stagger:2" aria-hidden="true">
       <span class="scroll-text">scroll</span>
       <span class="scroll-arrow">↓</span>
     </div>
@@ -179,6 +193,32 @@
         </div>
       </div>
 
+      <div class="stats-row reveal">
+        <div class="stat-item">
+          <div class="stat-value">
+            <span class="stat-number" data-target="8">0</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">
+            <span class="stat-number" data-target="20">0</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">
+            <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">CI/CD Pipelines</span>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">
+            <span class="stat-number" data-target="3">0</span><span class="stat-suffix">&nbsp;</span>
+          </div>
+          <span class="stat-label">Cloud Platforms</span>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -191,12 +231,28 @@
         <span class="title-tag">&lt;</span>Skills<span class="title-tag"> /&gt;</span>
       </h2>
 
+      <div class="skill-filters reveal">
+        <button class="skill-filter active" data-filter="all" aria-pressed="true">All</button>
+        <button class="skill-filter" aria-pressed="false" data-filter="cloud">Cloud</button>
+        <button class="skill-filter" aria-pressed="false" data-filter="devops">DevOps</button>
+        <button class="skill-filter" aria-pressed="false" data-filter="iac">IaC</button>
+        <button class="skill-filter" aria-pressed="false" data-filter="containers">Containers</button>
+        <button class="skill-filter" aria-pressed="false" data-filter="automation">Automation</button>
+        <button class="skill-filter" aria-pressed="false" data-filter="identity">Identity</button>
+        <button class="skill-filter" aria-pressed="false" data-filter="networking">Networking</button>
+        <button class="skill-filter" aria-pressed="false" data-filter="monitoring">Monitoring</button>
+        <button class="skill-filter" aria-pressed="false" data-filter="cost">Cost</button>
+        <button class="skill-filter" aria-pressed="false" data-filter="security">Security</button>
+        <button class="skill-filter" aria-pressed="false" data-filter="governance">Governance</button>
+        <button class="skill-filter" aria-pressed="false" data-filter="tools">Tools</button>
+      </div>
+
       <div class="skills-grid">
         <!-- Cloud -->
         <div class="skill-category reveal" data-category="cloud">
           <div class="skill-cat-header">
             <span class="cat-icon">☁️</span>
-            <h3>Cloud Platforms</h3>
+            <h3>Cloud Architecture</h3>
           </div>
           <div class="skill-items">
             <div class="skill-chip" data-level="95">
@@ -308,6 +364,14 @@
             <div class="skill-chip" data-level="80">
               <span class="chip-name">Service Mesh</span>
               <div class="chip-bar"><div class="chip-fill" style="--fill:80%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="85">
+              <span class="chip-name">Pod Security Standards</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="85">
+              <span class="chip-name">K8s Network Policies</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
             </div>
           </div>
         </div>
@@ -458,12 +522,20 @@
               <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
             </div>
             <div class="skill-chip" data-level="85">
-              <span class="chip-name">Elasticsearch</span>
+              <span class="chip-name">Elastic Search</span>
               <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
             </div>
             <div class="skill-chip" data-level="85">
               <span class="chip-name">OpenTelemetry</span>
               <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="85">
+              <span class="chip-name">ELK Stack</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="82">
+              <span class="chip-name">FluentBit</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:82%"></div></div>
             </div>
           </div>
         </div>
@@ -494,6 +566,52 @@
             <div class="skill-chip" data-level="88">
               <span class="chip-name">Cloud Cost Planning</span>
               <div class="chip-bar"><div class="chip-fill" style="--fill:88%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security & DevSecOps -->
+        <div class="skill-category reveal" data-category="security">
+          <div class="skill-cat-header">
+            <span class="cat-icon">🔒</span>
+            <h3>Security &amp; DevSecOps</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-chip" data-level="88">
+              <span class="chip-name">SAST / DAST</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:88%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="85">
+              <span class="chip-name">Azure Sentinel (SIEM)</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="85">
+              <span class="chip-name">AWS GuardDuty</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="85">
+              <span class="chip-name">AWS Security Hub</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="88">
+              <span class="chip-name">HashiCorp Vault</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:88%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="85">
+              <span class="chip-name">AWS Secrets Manager</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="85">
+              <span class="chip-name">Container Security</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:85%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="82">
+              <span class="chip-name">Vulnerability Scanning</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:82%"></div></div>
+            </div>
+            <div class="skill-chip" data-level="82">
+              <span class="chip-name">Cloudflare Zero Trust</span>
+              <div class="chip-bar"><div class="chip-fill" style="--fill:82%"></div></div>
             </div>
           </div>
         </div>
@@ -614,10 +732,13 @@
               <ul>
                 <li>Developed Azure Landing Zone–aligned architectures using Terraform and Bicep, increasing provisioning consistency by <strong>70%</strong> and cutting environment setup time from days to under 2 hours</li>
                 <li>Standardised AKS clusters across environments, decreasing configuration drift by <strong>60%</strong> and boosting deployment reliability by <strong>40%</strong></li>
+                <li>Designed secure CI/CD pipelines with SAST/DAST integration and security gates, reducing vulnerability escape rate by <strong>60%</strong></li>
                 <li>Implemented AWS EKS clusters with secure networking (VPC, PrivateLink, Security Groups), improving workload isolation and achieving <strong>80%</strong> compliance</li>
                 <li>Designed hybrid Azure–AWS architectures for cross‑cloud workloads, improving service resilience by <strong>30%</strong> and reducing vendor lock‑in</li>
+                <li>Hardened Kubernetes clusters with Pod Security Standards, Network Policies, and RBAC, achieving <strong>90%</strong> compliance with CIS benchmarks</li>
                 <li>Created umbrella CI/CD pipelines in Azure DevOps for coordinated deployment of <strong>20+</strong> microservices, decreasing release effort by <strong>50%</strong></li>
                 <li>Established OpenTelemetry collectors and Grafana dashboards, refining MTTR by <strong>35%</strong> and enabling real‑time observability</li>
+                <li>Implemented secrets management using HashiCorp Vault and AWS Secrets Manager, eliminating hard‑coded credentials across <strong>30+</strong> repositories</li>
                 <li>Optimised Docker images and artifact workflows, reducing image size by up to <strong>45%</strong> and enhancing build times by <strong>30%</strong></li>
                 <li>Enforced platform security using NSGs, Private DNS Zones, and Azure Policies, achieving <strong>75%</strong> policy compliance</li>
                 <li>Built Terraform modules supporting both Azure and AWS, standardising provisioning across clouds and reducing IaC duplication by <strong>40%</strong></li>
@@ -631,6 +752,7 @@
                 <span class="tag">Bicep</span><span class="tag">AKS</span><span class="tag">EKS</span>
                 <span class="tag">Azure DevOps</span><span class="tag">Docker</span><span class="tag">OpenTelemetry</span>
                 <span class="tag">Grafana</span><span class="tag">CloudWatch</span><span class="tag">Azure Policy</span>
+                <span class="tag">SAST/DAST</span><span class="tag">HashiCorp Vault</span><span class="tag">Container Security</span>
               </div>
             </div>
           </div>
@@ -655,14 +777,17 @@
               <h4>Key Contributions</h4>
               <ul>
                 <li>Directed cloud modernisation initiatives using Azure, elevating platform reliability and performance for <strong>10+</strong> digital services</li>
+                <li>Deployed Azure Sentinel SIEM with Logic Apps for automated incident response, cutting mean detection time by <strong>40%</strong></li>
                 <li>Mentored cross‑functional engineering teams, increasing delivery velocity by <strong>25%</strong> through refined DevOps practices</li>
                 <li>Advanced adoption of Azure DevOps CI/CD pipelines, decreasing deployment friction and enhancing release frequency by <strong>40%</strong></li>
+                <li>Built centralised security logging infrastructure using ELK Stack and FluentBit, consolidating logs from <strong>50+</strong> services</li>
                 <li>Collaborated with business stakeholders to translate requirements into scalable Azure architectures, lowering rework by <strong>30%</strong></li>
                 <li>Introduced governance frameworks that boosted service uptime and decreased incident volume by <strong>20%</strong></li>
               </ul>
               <div class="card-tags">
                 <span class="tag">Azure</span><span class="tag">Azure DevOps</span><span class="tag">Leadership</span>
                 <span class="tag">Cloud Architecture</span><span class="tag">Governance</span>
+                <span class="tag">Azure Sentinel</span><span class="tag">ELK Stack</span>
               </div>
             </div>
           </div>
@@ -688,20 +813,28 @@
               <ul>
                 <li>Led a globally distributed automation engineering team, enhancing collaboration and delivery efficiency by <strong>30%</strong></li>
                 <li>Applied Infrastructure as Code (IaC) using Terraform and Azure DevOps, decreasing provisioning time from hours to minutes</li>
+                <li>Implemented container image scanning and vulnerability remediation workflows, reducing critical CVEs by <strong>70%</strong></li>
                 <li>Modernised hybrid cloud environments, lowering operational incidents by <strong>25%</strong> and strengthening system stability</li>
                 <li>Refined CI/CD workflows with Azure DevOps Boards and Pipelines, boosting deployment success rates by <strong>35%</strong></li>
                 <li>Delivered automation solutions that saved <strong>50+ hours</strong> per month across teams</li>
               </ul>
               <div class="card-tags">
                 <span class="tag">Terraform</span><span class="tag">Azure DevOps</span><span class="tag">IaC</span>
-                <span class="tag">Hybrid Cloud</span><span class="tag">Team Leadership</span>
+                <span class="tag">Hybrid Cloud</span><span class="tag">Team Leadership</span><span class="tag">Container Security</span>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Show More Experience -->
+        <div class="exp-show-more reveal" id="showMoreExp" role="button" tabindex="0" aria-expanded="false">
+          <span class="exp-toggle-dot">+</span>
+          <span class="exp-toggle-text">Show Earlier Roles</span>
+          <span class="exp-toggle-count">(2 more)</span>
+        </div>
+
         <!-- Role 4: Quipu — Agile Automation Engineer -->
-        <div class="timeline-item reveal">
+        <div class="timeline-item reveal exp-extra">
           <div class="timeline-marker">
             <span class="marker-dot"></span>
             <span class="marker-line"></span>
@@ -720,19 +853,20 @@
               <ul>
                 <li>Engineered automation solutions across Azure PaaS, SaaS, and IaaS, enhancing operational efficiency by <strong>30%</strong></li>
                 <li>Developed microservices and cloud‑native applications, lowering service latency and improving scalability</li>
+                <li>Integrated vulnerability scanning into CI/CD pipelines, establishing early detection of security issues and reducing post‑deployment remediation by <strong>35%</strong></li>
                 <li>Executed CI/CD pipelines that decreased deployment time by <strong>40%</strong> and strengthened release reliability</li>
                 <li>Supported Azure Virtual Desktop, API Management, and enterprise cloud workloads, boosting service availability and user satisfaction</li>
               </ul>
               <div class="card-tags">
                 <span class="tag">Azure PaaS</span><span class="tag">CI/CD</span><span class="tag">Microservices</span>
-                <span class="tag">Automation</span><span class="tag">AVD</span>
+                <span class="tag">Automation</span><span class="tag">AVD</span><span class="tag">Vulnerability Scanning</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Role 5: Quipu — Student Intern -->
-        <div class="timeline-item reveal">
+        <div class="timeline-item reveal exp-extra">
           <div class="timeline-marker">
             <span class="marker-dot"></span>
             <span class="marker-line"></span>
@@ -953,8 +1087,103 @@
           </a>
         </div>
 
+        <!-- Project: Secure CI/CD Pipeline Framework -->
+        <div class="project-card reveal project-extra">
+          <div class="project-pipeline-header">
+            <span class="pipeline-stage passed">Scan</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Gate</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Deploy</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Secure ✓</span>
+          </div>
+          <h3 class="project-title">Secure CI/CD Pipeline Framework</h3>
+          <p class="project-desc">
+            End‑to‑end DevSecOps pipeline with SAST/DAST integration, secrets scanning,
+            container image vulnerability checks, and automated security gates.
+            Uses HashiCorp Vault for secrets management and Azure Sentinel for security event correlation.
+          </p>
+          <div class="project-code">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">secure-pipeline.yml</span>
+            </div>
+            <pre><code><span class="yaml-key">stages:</span>
+  - <span class="yaml-key">stage:</span> <span class="yaml-val">SecurityScan</span>
+    <span class="yaml-key">jobs:</span>
+      - <span class="yaml-key">job:</span> <span class="yaml-val">SAST</span>
+        <span class="yaml-key">steps:</span>
+          - <span class="yaml-key">task:</span> <span class="yaml-val">CredScan@1</span>
+          - <span class="yaml-key">task:</span> <span class="yaml-val">SonarQube@1</span>
+      - <span class="yaml-key">job:</span> <span class="yaml-val">ContainerScan</span>
+        <span class="yaml-key">steps:</span>
+          - <span class="yaml-key">script:</span> <span class="yaml-val">trivy image $(imageTag)</span>
+  - <span class="yaml-key">stage:</span> <span class="yaml-val">SecurityGate</span>
+    <span class="yaml-key">condition:</span> <span class="yaml-val">succeeded()</span>
+    <span class="yaml-key">jobs:</span>
+      - <span class="yaml-key">job:</span> <span class="yaml-val">VaultSecrets</span>
+        <span class="yaml-key">steps:</span>
+          - <span class="yaml-key">task:</span> <span class="yaml-val">HashiCorpVault@0</span></code></pre>
+          </div>
+          <div class="project-tags">
+            <span class="tag">SAST/DAST</span><span class="tag">HashiCorp Vault</span><span class="tag">Trivy</span>
+            <span class="tag">Azure DevOps</span><span class="tag">SonarQube</span><span class="tag">DevSecOps</span>
+          </div>
+        </div>
+
+        <!-- Project: SIEM & Threat Detection Platform -->
+        <div class="project-card reveal project-extra">
+          <div class="project-pipeline-header">
+            <span class="pipeline-stage passed">Ingest</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Detect</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Respond</span>
+            <span class="pipeline-arrow">→</span>
+            <span class="pipeline-stage passed">Resolve ✓</span>
+          </div>
+          <h3 class="project-title">SIEM &amp; Threat Detection Platform</h3>
+          <p class="project-desc">
+            Centralised security monitoring using Azure Sentinel and ELK Stack with FluentBit log shipping.
+            Automated incident response via Logic Apps and custom Bash runbooks.
+            Integrated AWS GuardDuty and Security Hub findings into a unified security dashboard.
+          </p>
+          <div class="project-code">
+            <div class="code-header">
+              <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+              <span class="code-filename">sentinel.tf</span>
+            </div>
+            <pre><code><span class="tf-key">resource</span> <span class="tf-str">"azurerm_sentinel_log_analytics_workspace_onboarding"</span> <span class="tf-str">"siem"</span> {
+  workspace_id = azurerm_log_analytics_workspace.security.id
+}
+
+<span class="tf-key">resource</span> <span class="tf-str">"azurerm_sentinel_alert_rule_scheduled"</span> <span class="tf-str">"brute_force"</span> {
+  name                       = <span class="tf-str">"detect-brute-force"</span>
+  log_analytics_workspace_id = azurerm_sentinel_log_analytics_workspace_onboarding.siem.workspace_id
+  severity                   = <span class="tf-str">"High"</span>
+  query                      = <span class="tf-str">"SigninLogs | where ResultType == '50126' | summarize count() by UserPrincipalName | where count_ > 10"</span>
+  query_frequency            = <span class="tf-str">"PT5M"</span>
+  query_period               = <span class="tf-str">"PT30M"</span>
+}</code></pre>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Azure Sentinel</span><span class="tag">ELK Stack</span><span class="tag">FluentBit</span>
+            <span class="tag">GuardDuty</span><span class="tag">Terraform</span><span class="tag">SIEM/SOAR</span>
+          </div>
+        </div>
+
+        <!-- Show More / Show Less Card -->
+        <div class="project-card show-more-card reveal" id="showMoreProjects" role="button" tabindex="0" aria-label="Show more projects" aria-expanded="false">
+          <div class="show-more-inner">
+            <svg class="show-more-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <span class="show-more-text">Show More</span>
+            <span class="show-more-count">9 more projects</span>
+          </div>
+        </div>
+
         <!-- Project 5: Azure Community Health -->
-        <div class="project-card reveal">
+        <div class="project-card reveal project-extra">
           <div class="project-pipeline-header">
             <span class="pipeline-stage passed">Collect</span>
             <span class="pipeline-arrow">→</span>
@@ -999,7 +1228,7 @@
         </div>
 
         <!-- Project 6: Enterprise CI/CD Platform -->
-        <div class="project-card reveal">
+        <div class="project-card reveal project-extra">
           <div class="project-pipeline-header">
             <span class="pipeline-stage passed">Build</span>
             <span class="pipeline-arrow">→</span>
@@ -1044,7 +1273,7 @@
         </div>
 
         <!-- Project 7: Terraform Module Library -->
-        <div class="project-card reveal">
+        <div class="project-card reveal project-extra">
           <div class="project-pipeline-header">
             <span class="pipeline-stage passed">Plan</span>
             <span class="pipeline-arrow">→</span>
@@ -1084,7 +1313,7 @@
         </div>
 
         <!-- Project 8: GitOps Kubernetes Platform -->
-        <div class="project-card reveal">
+        <div class="project-card reveal project-extra">
           <div class="project-pipeline-header">
             <span class="pipeline-stage passed">Commit</span>
             <span class="pipeline-arrow">→</span>
@@ -1125,7 +1354,7 @@
         </div>
 
         <!-- Project 9: Cloud Observability Stack -->
-        <div class="project-card reveal">
+        <div class="project-card reveal project-extra">
           <div class="project-pipeline-header">
             <span class="pipeline-stage passed">Collect</span>
             <span class="pipeline-arrow">→</span>
@@ -1162,7 +1391,7 @@
         </div>
 
         <!-- Project 10: DevSecOps Pipeline Framework -->
-        <div class="project-card reveal">
+        <div class="project-card reveal project-extra">
           <div class="project-pipeline-header">
             <span class="pipeline-stage passed">Push</span>
             <span class="pipeline-arrow">→</span>
@@ -1204,7 +1433,7 @@
         </div>
 
         <!-- Project 11: Cloud Governance & Cost Automation -->
-        <div class="project-card reveal">
+        <div class="project-card reveal project-extra">
           <div class="project-pipeline-header">
             <span class="pipeline-stage passed">Assess</span>
             <span class="pipeline-arrow">→</span>

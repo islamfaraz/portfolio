@@ -361,6 +361,112 @@
     });
   }
 
+  /* ─── Skill Category Filters ────────────────────────────── */
+  const filterBtns = document.querySelectorAll('.skill-filter');
+  const skillCategories = document.querySelectorAll('.skill-category');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+
+      skillCategories.forEach(cat => {
+        if (filter === 'all' || cat.dataset.category === filter) {
+          cat.classList.remove('filter-hidden');
+        } else {
+          cat.classList.add('filter-hidden');
+        }
+      });
+    });
+  });
+
+  /* ─── Experience Show More / Less ───────────────────────── */
+  const showMoreExp = document.getElementById('showMoreExp');
+  const timeline = showMoreExp ? showMoreExp.closest('.timeline') : null;
+
+  if (showMoreExp && timeline) {
+    showMoreExp.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showMoreExp.click(); }
+    });
+    showMoreExp.addEventListener('click', () => {
+      const isExpanded = timeline.classList.toggle('exp-expanded');
+      showMoreExp.classList.toggle('expanded', isExpanded);
+      showMoreExp.setAttribute('aria-expanded', String(isExpanded));
+      const textEl = showMoreExp.querySelector('.exp-toggle-text');
+      const countEl = showMoreExp.querySelector('.exp-toggle-count');
+
+      if (isExpanded) {
+        textEl.textContent = 'Show Less';
+        countEl.textContent = '';
+        timeline.querySelectorAll('.exp-extra.reveal').forEach(el => el.classList.add('active'));
+      } else {
+        textEl.textContent = 'Show Earlier Roles';
+        countEl.textContent = '(2 more)';
+        document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
+  /* ─── Projects Show More / Less ─────────────────────────── */
+  const showMoreCard = document.getElementById('showMoreProjects');
+  const projectsGrid = showMoreCard ? showMoreCard.closest('.projects-grid') : null;
+
+  if (showMoreCard && projectsGrid) {
+    showMoreCard.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showMoreCard.click(); }
+    });
+    showMoreCard.addEventListener('click', () => {
+      const isExpanded = projectsGrid.classList.toggle('projects-expanded');
+      showMoreCard.setAttribute('aria-expanded', String(isExpanded));
+      const textEl = showMoreCard.querySelector('.show-more-text');
+      const countEl = showMoreCard.querySelector('.show-more-count');
+
+      if (isExpanded) {
+        textEl.textContent = 'Show Less';
+        countEl.textContent = '';
+        // Trigger reveal animations on newly visible cards
+        projectsGrid.querySelectorAll('.project-extra.reveal').forEach(el => el.classList.add('active'));
+      } else {
+        textEl.textContent = 'Show More';
+        countEl.textContent = '9 more projects';
+        // Scroll back to projects section top
+        document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
+  /* ─── Animated Stat Counters ──────────────────────────── */
+  const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+
+  if (statNumbers.length) {
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target, 10);
+          const duration = 1500;
+          const start = performance.now();
+
+          const animate = (now) => {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+            el.textContent = Math.round(target * eased);
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+
+          requestAnimationFrame(animate);
+          countObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    statNumbers.forEach(el => countObserver.observe(el));
+  }
+
   /* ─── Keyboard navigation for pipeline nav ────────────── */
   const navPipeline = document.querySelector('.nav-pipeline');
   if (navPipeline) {
