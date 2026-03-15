@@ -1,0 +1,471 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7.4, 30 July 2025) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,withhyper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and simpleicons packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\definecolor{maroon}{RGB}{128, 0, 0}
+
+\sloppy
+\emergencystretch=2em
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
+\iftutex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Faraz Islam}
+\tagline{\small Experienced Cloud Platform Engineer @ Veeam Software \textcolor{black}{| IT Cloud Systems \& Infrastructure Specialist | Azure DevOps | Azure Cloud Management | AWS | GitHub | IaC | Cloud Monitoring and Security}
+}
+
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{FarazCV}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{fislam2010@gmail.com}
+  \phone{+4917620705482}
+  \mailaddress{Eschersheimer Landstr. 461, 60431 Frankfurt am Main}
+  \location{Germany}
+  \linkedin{https://www.linkedin.com/in/faraz-islam/}
+  \homepage{https://islamfaraz.github.io/portfolio/}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Experience}
+
+\cvevent{Experienced Cloud Platform Engineer}{Veeam Software}{Aug 2024 -- Present}{Germany}
+\begin{justify}
+\begin{itemize}
+
+    \item Developed Azure Landing Zone–aligned architectures using Terraform and Bicep, increasing provisioning consistency by 70\% and cutting environment setup time from days to under 2 hours.
+    \item Standardized AKS clusters across environments, decreasing configuration drift by 60\% and boosting deployment reliability by 40\%.
+     \item Implemented AWS EKS clusters with secure networking (VPC, PrivateLink, Security Groups), improving workload isolation and achieving 80\% compliance.
+    \item Designed hybrid Azure–AWS architectures for cross-cloud workloads, improving service resilience by 30\% and reducing vendor lock-in.
+    \item Facilitated architecture reviews and technical workshops, accelerating cloud adoption and lowering design ambiguity by 50\%.
+    \item Created umbrella CI/CD pipelines in Azure DevOps for coordinated deployment of 20+ microservices, decreasing release effort by 50\% and strengthening traceability.
+    \item Established OpenTelemetry collectors and Grafana dashboards, refining MTTR by 35\% and enabling real-time observability.
+    \item Optimized Docker images and artifact workflows, lessening image size by up to 45\% and enhancing build times by 30\%.
+    \item Enforced platform security using NSGs, Private DNS Zones, and Azure Policies, achieving 75\% policy compliance.
+    \item Systematized operational notifications via Power Automate, boosting stakeholder visibility and lowering manual communication overhead by 80\%.
+    \item Built Terraform modules supporting both Azure and AWS, standardizing provisioning across clouds and reducing IaC duplication by 40\%.
+    \item Integrated CloudWatch and AWS X-Ray with OpenTelemetry pipelines, improving distributed tracing coverage by 45\%.
+    \item Optimized AWS compute and storage costs using rightsizing and lifecycle policies, reducing monthly spend by 20\%.
+    
+\end{itemize}
+\end{justify}
+\divider
+
+\cvevent{Deputy Head of Digital Experience Department}{Quipu GmbH}{Apr 2024 -- Jul 2024}{Germany}
+\begin{justify}
+\begin{itemize}
+
+    \item Directed cloud modernization initiatives using Azure, elevating platform reliability and performance for 10+ digital services.
+    \item Mentored cross-functional engineering teams, increasing delivery velocity by 25\% through refined DevOps practices.
+    \item Advanced adoption of Azure DevOps CI/CD pipelines, decreasing deployment friction and enhancing release frequency by 40\%.
+    \item Collaborated with business stakeholders to translate requirements into scalable Azure architectures, lowering rework by 30\%.
+    \item Introduced governance frameworks that boosted service uptime and decreased incident volume by 20\%.
+    
+\end{itemize}
+\end{justify}
+\divider
+
+\cvevent{Coordinator of Automations}{Quipu GmbH}{Nov 2022 -- Mar 2024}{Germany}
+\begin{justify}
+\begin{itemize}
+
+    \item Led a globally distributed automation engineering team, enhancing collaboration and delivery efficiency by 30\%.
+    \item Applied Infrastructure as Code (IaC) using Terraform and Azure DevOps, decreasing provisioning time from hours to minutes.
+    \item Modernized hybrid cloud environments, lowering operational incidents by 25\% and strengthening system stability.
+    \item Refined CI/CD workflows with Azure DevOps Boards and Pipelines, boosting deployment success rates by 35\%.
+    \item Delivered automation solutions that saved 50+ hours per month across teams.
+    
+\end{itemize}
+\end{justify}
+\divider
+
+\cvevent{Agile Automation Engineer}{Quipu GmbH}{May 2018 -- Oct 2022}{Germany}
+\begin{justify}
+\begin{itemize}
+
+    \item Engineered automation solutions across Azure PaaS, SaaS, and IaaS, enhancing operational efficiency by 30\%.
+    \item Developed microservices and cloud-native applications, lowering service latency and improving scalability.
+    \item Executed CI/CD pipelines that decreased deployment time by 40\% and strengthened release reliability.
+    \item Supported Azure Virtual Desktop, API Management, and enterprise cloud workloads, boosting service availability and user satisfaction.
+    
+\end{itemize}
+\end{justify}
+\divider
+
+\cvevent{Student Intern}{Quipu GmbH}{May 2017 -- May 2018}{Germany}
+\begin{justify}
+\begin{itemize}
+
+    \item Performed statistical data analysis and cloud administration tasks, refining reporting accuracy by 20\%.
+    \item Assisted Azure ML experiments and data modeling workflows, accelerating research cycles.
+    \item Enhanced ServiceDesk operations by streamlining ticket triage and decreasing resolution time by 15\%
+    
+\end{itemize}
+\end{justify}
+
+\divider
+
+
+\cvsection{Projects}
+
+\cvevent{\textbf{\textcolor{maroon}{Azure Landing Zone Modernization Program}}}{}{}{}
+\begin{justify}
+\begin{itemize}
+    \item Modernized the enterprise Azure foundation by introducing modular Landing Zone components, reducing onboarding time for new workloads by 60\% and improving architectural consistency across teams.
+    \item Implemented a governance and identity model that increased policy compliance to 85\% and reduced audit findings by 40\%.
+    \item Delivered reusable IaC patterns that cut environment provisioning effort by 50\% and improved platform scalability for future expansions.
+\end{itemize}
+\end{justify}
+
+\divider
+
+\cvevent{\textbf{\textcolor{maroon}{AKS Platform Reliability \& Observability Initiative}}}{}{}{}
+\begin{justify}
+\begin{itemize}
+    \item Designed a reliability framework for AKS workloads, improving service resilience by 35\% through standardized deployment patterns, health probes, and scaling strategies.
+    \item Built an observability blueprint integrating OpenTelemetry and metrics pipelines, reducing MTTR by 35\% and enabling proactive detection of performance issues.
+    \item Partnered with development teams to optimize microservice performance, lowering latency by up to 25\% and improving user experience across critical applications.
+
+\end{itemize}
+\end{justify}
+\medskip
+
+\cvevent{\textbf{\textcolor{maroon}{Enterprise CI/CD Standardization Program}}}{}{}{}
+\begin{justify}
+\begin{itemize}
+    \item Defined a unified CI/CD architecture for microservices, increasing release reliability by 30\% and reducing manual deployment effort by 50\%.
+    \item Introduced artifact governance and automated quality gates, decreasing rollback frequency by 45\% and improving traceability across releases.
+    \item Established cross-team deployment orchestration patterns that reduced operational coordination overhead by 40\% and improved delivery predictability.
+\end{itemize}
+\end{justify}
+
+\divider
+
+\cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+\wheelchart{1.5cm}{0.5cm}{%
+  6/8em/accent!30/{Sleep,\\beautiful sleep},
+  3/8em/accent!40/Hopeful novelist by night,
+  8/8em/accent!60/Actively learning \& upskilling,
+  2/10em/accent/Sports \& relaxation,
+  5/6em/accent!20/Spending time with family
+}
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+\newpage
+
+% \cvsection{Publications}
+
+% %% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list.
+% %% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+% %% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors.
+% \mynames{Lim/Lian\bibnamedelima Tze,
+%   Wong/Lian\bibnamedelima Tze,
+%   Lim/Tracy,
+%   Lim/L.\bibnamedelimi T.}
+% %% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+
+% \nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{My Life Philosophy}
+
+\begin{quote}
+``Every day is an opportunity to learn, improve, and help others succeed.''
+\end{quote}
+
+% \cvsection{Most Proud of}
+
+% \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+
+% \divider
+
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+% \divider
+
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+\cvsection{Education}
+
+\cvevent{Ph.D.\ in Software Applications}{Integral University, India}{January 2023 -- Present}{}
+
+\divider
+
+\cvevent{M.Sc.\ in High Integrity Systems}{Frankfurt University of Applied Sciences, Germany}{April 2016 -- December 2020}{}
+
+\divider
+
+\cvevent{B.Tech.\ in Computer Science}{Aligarh Muslim University, India}{July 2011 -- June 2015}{}
+
+
+\cvsection{SKILLS}
+
+% Don't overuse these \cvtag boxes — they're just eye-candies and not essential. If something doesn't fit on a single line, it probably works better as part of an itemized list (probably inlined itemized list), or just as a comma-separated list of strengths.
+
+\textbf{\textcolor{maroon}{Cloud Architecture:}}\\[4pt]
+\cvtag{Azure} 
+\cvtag{AWS} 
+\cvtag{Landing Zones} 
+\cvtag{Well-Architecture Framework} 
+\cvtag{Microservices} 
+\cvtag{Event-Driven Design}
+
+\divider
+\textbf{\textcolor{maroon}{Containers \& Orchestration:}}\\ [4pt]
+\cvtag{AKS}
+\cvtag{EKS}
+\cvtag{Docker}
+\cvtag{Helm}
+\cvtag{Service Mesh}
+
+\divider
+\textbf{\textcolor{maroon}{Infrastructure as Code}}\\ [4pt]
+\cvtag{Terraform}
+\cvtag{Bicep}
+\cvtag{CloudFormation}
+
+\divider
+\textbf{\textcolor{maroon}{DevOps \& CI/CD:}}\\
+\cvtag{Azure DevOps}
+\cvtag{GitHub Actions}
+\cvtag{TFS}
+\cvtag{CI/CD}
+\cvtag{YAML Pipelines}
+\cvtag{JFrog Artifactory}
+\cvtag{ADO Dashboards}
+
+\divider
+\textbf{\textcolor{maroon}{Automation \& Scripting:}}\\
+\cvtag{PowerShell}
+\cvtag{Bash}
+\cvtag{Power Automate}
+\cvtag{Azure CLI}
+\cvtag{AWS CLI}
+\cvtag{Azure PowerShell}
+
+\divider
+\textbf{\textcolor{maroon}{Networking \& Security:}}\\
+\cvtag{VPC / VNet}
+\cvtag{PrivateLink}
+\cvtag{Private Link Service}
+\cvtag{Security Groups}
+\cvtag{NSG}
+\cvtag{Az Firewall}
+\cvtag{AWS WAF}
+\cvtag{Azure WAF}
+
+\divider
+\textbf{\textcolor{maroon}{Observability:}}\\
+\cvtag{SolarWinds}
+\cvtag{OpenTelemetry}
+\cvtag{Prometheus}
+\cvtag{Grafana}
+\cvtag{Elastic Search}
+\cvtag{Application Insights}
+\cvtag{Azure Monitor}
+\cvtag{CloudWatch}
+\cvtag{Log Analytics}
+
+\divider
+\textbf{\textcolor{maroon}{Cost Optimization:}}\\
+\cvtag{Azure Cost Management}
+\cvtag{AWS Cost Explorer}
+\cvtag{Rightsizing}
+\cvtag{Reserved Instances}
+\cvtag{Cloud Cost Planning}
+
+\divider
+\textbf{\textcolor{maroon}{Identity \& Access Management:}}\\
+\cvtag{Entra ID}
+\cvtag{Conditional Access}
+\cvtag{AWS IAM}
+\cvtag{Azure RBAC}
+\cvtag{AWS SSO}
+\cvtag{Identity Governance}
+
+\divider
+\textbf{\textcolor{maroon}{Governance \& Compliance:}}\\
+\cvtag{Policy as Code}
+\cvtag{CIS Benchmarks}
+\cvtag{Zero Trust}
+\cvtag{Azure Policies}
+\cvtag{AWS Config}
+
+\divider
+\textbf{\textcolor{maroon}{Tools \& Collaboration:}}\\[4pt]
+\cvtag{Power BI}
+\cvtag{Jira}
+\cvtag{Confluence}
+\cvtag{GitHub}
+\cvtag{Bitbucket}
+\cvtag{Azure Repos}
+\cvtag{MS Office Suite}
+\cvtag{Outlook}
+\cvtag{MS Teams}
+\cvtag{SharePoint}
+\cvtag{ManageEngine SP}
+\cvtag{Zendesk}
+\cvtag{Workday}
+\cvtag{Copilot}
+
+\cvsection{Languages}
+
+\cvskill{English}{5}
+\divider
+
+\cvskill{German}{2} %% Supports X.5 values.
+\divider
+
+\cvskill{Hindi}{5}
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+
+% \divider
+
+% \cvsection{Referees}
+
+% \cvref{name}{email}{mailing address}
+% \cvref{Mr. Fahad Islam}{NIS Biotech}{salesnisbiotech@gmail.com}
+% {\faPhone\ +919045673320}
+% {Plot F-11, Industrial Area, UPSIDC, MG Road, Ghaziabad 201015, India}
+
+\end{paracol}
+
+
+\end{document}
