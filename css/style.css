@@ -73,7 +73,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: justify;
+  text-align: left;
 }
 
 a {
@@ -100,7 +100,7 @@ ul { list-style: none; }
 
 /* Text alignment overrides — justified body with targeted exceptions */
 h1, h2, h3, h4, h5, h6 { text-align: left; }
-.section-title, .highlight-icon, .form-note { text-align: center; }
+.section-title, .form-note { text-align: center; }
 .btn, .btn-full { text-align: center; }
 .terminal-body, .project-code pre, code, .code-header { text-align: left; }
 .form-group label { text-align: left; }
@@ -401,8 +401,10 @@ h1, h2, h3, h4, h5, h6 { text-align: left; }
   .stats-row { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .stat-number, .stat-suffix { font-size: 1.6rem; }
   .about-highlights { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .highlight-card { padding: 16px; }
-  .highlight-icon { font-size: 1.5rem; margin-bottom: 8px; }
+  .highlight-card { padding: 14px; gap: 10px; }
+  .highlight-header { gap: 10px; }
+  .highlight-icon-wrap { width: 36px; height: 36px; border-radius: 8px; }
+  .highlight-icon-wrap svg { width: 20px; height: 20px; }
   .highlight-card h3 { font-size: 0.85rem; }
   .highlight-card p { font-size: 0.78rem; }
   .about-text p { font-size: 0.95rem; }
@@ -447,7 +449,7 @@ h1, h2, h3, h4, h5, h6 { text-align: left; }
   .card-title { font-size: 0.95rem; }
   .card-date { font-size: 0.72rem; }
   .about-highlights { grid-template-columns: 1fr; }
-  .highlight-card { padding: 14px; }
+  .highlight-card { padding: 14px; gap: 12px; }
 }
 
 /* ─── Hero Section ────────────────────────────────────────── */
@@ -702,6 +704,10 @@ h1, h2, h3, h4, h5, h6 { text-align: left; }
   margin-bottom: 16px;
   color: var(--text-muted);
   font-size: 1.05rem;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  word-break: break-word;
 }
 .about-text strong { color: var(--text); }
 .about-intro {
@@ -721,30 +727,87 @@ h1, h2, h3, h4, h5, h6 { text-align: left; }
   border-radius: var(--radius);
   padding: 24px;
   transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
 }
+.highlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.highlight-card[data-accent="primary"]::before { background: var(--primary); }
+.highlight-card[data-accent="secondary"]::before { background: var(--secondary); }
+.highlight-card[data-accent="accent"]::before { background: var(--accent); }
+.highlight-card[data-accent="accent2"]::before { background: var(--accent-2); }
+.highlight-card:hover::before { opacity: 1; }
+
 .section-alt .highlight-card {
   background: var(--bg);
 }
 .highlight-card:hover {
-  border-color: var(--primary);
+  border-color: var(--border);
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 120, 212, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
-.highlight-icon {
-  font-size: 2rem;
-  margin-bottom: 12px;
+.highlight-card[data-accent="primary"]:hover { border-color: var(--primary); box-shadow: 0 8px 30px rgba(0, 120, 212, 0.12); }
+.highlight-card[data-accent="secondary"]:hover { border-color: var(--secondary); box-shadow: 0 8px 30px rgba(255, 153, 0, 0.12); }
+.highlight-card[data-accent="accent"]:hover { border-color: var(--accent); box-shadow: 0 8px 30px rgba(0, 212, 170, 0.12); }
+.highlight-card[data-accent="accent2"]:hover { border-color: var(--accent-2); box-shadow: 0 8px 30px rgba(132, 79, 186, 0.12); }
+
+.highlight-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+.highlight-card:hover .highlight-icon-wrap {
+  transform: scale(1.1);
+}
+.highlight-card[data-accent="primary"] .highlight-icon-wrap {
+  background: rgba(0, 120, 212, 0.12);
+  color: var(--primary);
+}
+.highlight-card[data-accent="secondary"] .highlight-icon-wrap {
+  background: rgba(255, 153, 0, 0.12);
+  color: var(--secondary);
+}
+.highlight-card[data-accent="accent"] .highlight-icon-wrap {
+  background: rgba(0, 212, 170, 0.12);
+  color: var(--accent);
+}
+.highlight-card[data-accent="accent2"] .highlight-icon-wrap {
+  background: rgba(132, 79, 186, 0.12);
+  color: var(--accent-2);
+}
+
+.highlight-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .highlight-card h3 {
   font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 8px;
   color: var(--text);
 }
 .highlight-card p {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   line-height: 1.6;
+  text-align: left;
 }
 
 /* ─── Stat Counters ──────────────────────────────────────── */
